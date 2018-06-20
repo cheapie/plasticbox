@@ -1,3 +1,8 @@
+if not minetest.global_exists("unifieddyes") then
+	minetest.log("error", "[MOD/plasticbox] plasticbox requires that unifieddyes be installed, which wasn't detected. As a result, the plasticbox mod will not load.");
+	return
+end
+
 minetest.register_node("plasticbox:plasticbox", {
 	description = "Plastic Box",
 	tiles = {"plasticbox_white.png"},
