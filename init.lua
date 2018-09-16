@@ -21,14 +21,16 @@ if minetest.global_exists("stairsplus") then
 	})
 end
 
-minetest.register_craft( {
-        output = "plasticbox:plasticbox 4",
-        recipe = {
-                { "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" },
-                { "homedecor:plastic_sheeting", "", "homedecor:plastic_sheeting" },
-                { "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" }
-        },
-})
+if minetest.global_exists("homedecor") then
+	minetest.register_craft( {
+	        output = "plasticbox:plasticbox 4",
+	        recipe = {
+	                { "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" },
+	                { "homedecor:plastic_sheeting", "", "homedecor:plastic_sheeting" },
+	                { "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" }
+	        },
+	})
+end
 
 minetest.register_lbm({
 	name = "plasticbox:convert_colors",
